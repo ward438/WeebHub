@@ -1,0 +1,121 @@
+    /* gets rid of horizontal scroll bar  */
+    
+    @font-face {
+        font-family: 'yeyeyregular';
+        src: url('yeyey-1pk2-webfont.woff2') format('woff2'), url('yeyey-1pk2-webfont.woff') format('woff');
+        /* font-weight: normal;
+    font-style: normal; */
+    }
+    
+    #searchButton {
+        border-radius: 5px;
+    }
+    
+    #homeBackground {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: .3;
+    }
+    
+    #navButton {
+        border-radius: 5px;
+        background-color: rgba(104, 96, 96, 0.466);
+    }
+    
+    .rounded {
+        border-radius: 10px;
+    }
+    
+    .opacity {
+        opacity: .9;
+    }
+    
+    .yeyeFont {
+        font-family: 'yeyeyregular'
+    }
+    
+    body {
+        background: url('./akiraBG.jpg') no-repeat center center fixed;
+        /* background: url('https://cdn.hipwallpaper.com/i/43/53/urRvyc.jpg') no-repeat center center fixed; */
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    .collection {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mainBox {
+        font-family: yeyeyregular;
+        background-color: rgba(0, 153, 255, 0.096);
+        border-bottom: .2em solid rgba(8, 43, 66, 0.657);
+        margin-top: .9em;
+        margin-bottom: 1em;
+        /* display: flex;
+        flex-wrap: wrap; */
+        text-align: center;
+        font-size: 4em;
+        background-color: rgba(161, 150, 150, 0.74);
+    }
+    
+    .imageResizer {
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .textarea {
+        /* width: 80em; */
+        max-width: 100%;
+        height: 20em;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+        opacity: .9;
+    }
+    
+    .japaneseText {
+        color: red;
+        font-size: 1.2em;
+    }
+    
+    .cardBackground {
+        background: linear-gradient(to top right, #c5c0c0, #1a82f7)
+    }
+    
+    @media (min-width: 568px) {
+        .container {
+            width: 550px;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+    
+    @media screen and (min-width: 1336px) and (min-height: 768px) {}
+    
+    @media screen and (min-width: 4001px) {}
+    
+    @media screen and (min-width: 2501px) and (max-width: 4000px) {}
+    
+    @media screen and (min-width: 1600px) and (max-width: 2500px) {}
+    
+    @media screen and (max-width: 1599px) {}

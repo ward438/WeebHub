@@ -1,0 +1,21 @@
+<div class="row collection">
+    {{#each animes}}
+    <div class=" d-flex align-items">
+        <div class="card shadow p-1 mb-3 bg-white opacity " style="width: 16rem;">
+            <div class="card-body cardBackground">
+                <div><img class="center card shadow p-4 mb-6 bg-body imageResizer" src="{{posterImage.medium}}"><br>
+                </div>
+                <h2 class="card-title englishText">{{animeTitle.en}}</h2>
+                <h4 class=" card-title japaneseText">{{animeTitle.ja_jp}}</h4>
+                <h5>{{synopsis}}</h5>
+                <li>Average Rating: {{averageRating}}</li>
+                <li>Start Date: {{startDate}}</li>
+                <li>End Date: {{endDate}}</li>
+                <li>Age Rating: {{ageRatingGuide}}</li>
+                <li>Episode Count: {{episodeCount}}</li>
+                <li>Episode Length: {{episodeLength}}</li><br>
+            </div>
+
+        </div>
+    </div>{{/each}}
+</div>

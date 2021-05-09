@@ -1,0 +1,38 @@
+<div class="collection row">
+    {{!-- <div class="col-3"> --}}
+        <div class="card opacity card shadow p-1 mb-3 ">
+            <img src="https://www.pngitem.com/pimgs/m/474-4746224_anime-word-clip-art-hd-png-download.png"
+                class="card-img-top mageSizer" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">User Registration</h5>
+                {{#each errors}}
+                <div class="invalid-feedback" style="display: block">{{message}}</div>
+                {{/each}}
+
+                <form action="/user/register" method="POST">
+                    <div class="form-group">
+                        <label for="email" style="color:black">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="ユーザーログイン" name="email">
+                        <small id="emailHelp" class="form-text text-muted">Tell the world about your weebdom! Register
+                            now!
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" style="color:black">Username</label>
+                        <input type="username" class="form-control" id="username" aria-describedby="usernameHelp"
+                            placeholder="ユーザーネームを入力してください" name="username">
+                        <small id="usernameHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="color:black">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="パスワード" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        {{!--
+    </div> --}}
+
+</div>

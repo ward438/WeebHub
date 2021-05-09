@@ -1,0 +1,43 @@
+<!-- This template includes hardcoded data. In future lessons, you will be rendering data dynamically. -->
+<div class="container">
+    <div class="row">
+        {{#each reviews}}
+        <div>
+            <div class="align-items">
+                <div class="card shadow p-1 mb-3 bg-white opacity " style="width: 16rem;">
+                    <div class="card-body cardBackground">
+                        <div><img class="center card shadow p-4 mb-6 bg-body imageResizer"
+                                src="{{anime.posterImage.medium}}"><br>
+                        </div>
+                        <h2 class="card-title englishText">{{anime.animeTitle.en}}</h2>
+                        <h4 class=" card-title japaneseText">{{anime.animeTitle.ja_jp}}</h4>
+                        <h5>{{anime.synopsis}}</h5>
+                        <li>Average Rating: {{anime.averageRating}}</li>
+                        <li>Start Date: {{anime.startDate}}</li>
+                        <li>End Date: {{anime.endDate}}</li>
+                        <li>Age Rating: {{anime.ageRatingGuide}}</li>
+                        <li>Episode Count: {{anime.episodeCount}}</li>
+                        <li>Episode Length: {{anime.episodeLength}}</li><br>
+                    </div>
+                </div>
+                <div
+                    style="font-size: 1.3em;  color: white;font-size: 1.5em; text-shadow: 0.07em 0 black, 0 0.07em black,-0.07em 0 black, 0 -0.07em black;">
+                    &#128121;
+                    {{user.username}} <br>
+                    Weeb lvl:
+                    {{rating}}
+                </div>
+                <form>
+                    <textarea class="textarea" id="review" readonly>
+                        {{comment}}             
+                    </textarea>
+                </form>
+                <form>
+                    <textarea class="textarea"></textarea>
+                    <button class="submit">Reply</button>
+                </form>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {{!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> --}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+
+    <title>WEEBHUB</title>
+    <div class="fixed-top">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <div class="row">
+                    <div class='col-4'>
+                        <h5 class="text-white h4 yeyeFont">WeebHub &#127843</h5>
+                        <span class="text-muted">Get your weeb on!</span>
+                    </div>
+                    <div class='col-6'>
+                        {{#if user}}
+                        <button id='navButton'><a class="text-white" href="/logout">
+                                Logout
+                            </a></button>
+                        <button id='navButton'><a class="text-white" href="/anime">
+                                Anime Roll
+                            </a></button>
+                        <button id='navButton'><a class="text-white" href="/anime/reviews">
+                                Reviews
+                            </a></button>
+                        </a></button>
+                        {{else}}
+                        <button id='navButton'><a class="text-white" href="/">
+                                Login
+                            </a></button>
+                        <button id='navButton'><a class="text-white" href="/user/register">
+                                Register
+                            </a></button>
+                        {{/if}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <div style="color: white">{{user.username}}</div>
+            </button>
+            <div class="search-container" id="search">
+                <form action="/anime/search">
+                    <input type="text" placeholder='Anime Search' name="search" id="searchInput">
+                    <button type="submit" id="searchButton"> (ノಠ益ಠ)ノ彡<i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+    </div>
+</head>
+
+<body>
+    <div class="mainBox">
+        <p>&#127843;WEEBHUB&#x1F363;</p>
+        {{!-- Naruto run to the search bar to find your favorite
+        anime! We give you the stats that matter. Catch them all! --}}
+    </div>
+    <div class="container">
+        <div style="color: white">{{{body}}}</div>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="/postScript.js"></script>
+
+</html>

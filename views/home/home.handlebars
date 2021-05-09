@@ -1,0 +1,31 @@
+<div class="collection row">
+
+    <div class="card opacity shadow p-1 mb-3">
+        {{!-- <img src="../../public/css/login.png" class="card-img-top mageSizer" alt="..."> --}}
+        <img src="https://www.pngitem.com/pimgs/m/474-4746224_anime-word-clip-art-hd-png-download.png"
+            class="card-img-top mageSizer" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" style="color:black">User Login</h5>
+            {{#each errors}}
+            <div class="invalid-feedback" style="display: block">{{message}}</div>
+            {{/each}}
+
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="email" style="color:black">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="ユーザーログイン" name="email">
+                    <small id="emailHelp" class="form-text text-muted">Experience the spice of nice anime...
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="password" style="color:black">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="パスワード" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form><br>
+            <a href="/register" class="text-primary">Please Register to Log In</a>
+        </div>
+    </div>
+
+</div>
